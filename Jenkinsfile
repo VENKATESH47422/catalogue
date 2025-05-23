@@ -58,7 +58,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh """
-
+                    ls -la
                 """
                 // sh """
                 //     // ls -la
