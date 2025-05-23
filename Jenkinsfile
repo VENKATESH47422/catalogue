@@ -58,13 +58,10 @@ pipeline {
         stage('Build') {
             steps {
                 sh """
-                    ls -la
+                     ls -la
+                     zip -q -r catalogue.zip ./* -x ".git" -x "*.zip"
+                     ls -ltr
                 """
-                // sh """
-                //     // ls -la
-                //     // zip -q -r catalogue.zip ./* -x ".git" -x "*.zip"
-                //     // ls -ltr
-                // """
             }
         }
         // stage('Publish Artifact') {
