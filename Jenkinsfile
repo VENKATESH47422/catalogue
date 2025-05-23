@@ -6,13 +6,13 @@ pipeline {
     }
     environment { 
         packageVersion = ''
-       // nexusURL = '172.31.5.95:8081'
+        nexusURL = '172.31.92.120:8081'
     }
     options {
         timeout(time: 1, unit: 'HOURS')
-        // disableConcurrentBuilds()
+        disableConcurrentBuilds()
     }
-    //parameters {
+    parameters {
         // string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
         // text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
@@ -22,7 +22,7 @@ pipeline {
         // choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
         // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-   // }
+    }
     // build
     stages {
         stage('Get the version') {
