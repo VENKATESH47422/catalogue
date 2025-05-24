@@ -48,13 +48,20 @@ pipeline {
                 """
             }
         }
-        stage('Sonar Scan'){
-            steps{
+        stage('Sonar scans') {
+            steps {
                 sh """
-                    sonar-scanner
+                    echo "Sonar scan will run here"
                 """
             }
         }
+        // stage('Sonar Scan'){
+        //     steps{
+        //         sh """
+        //             sonar-scanner
+        //         """
+        //     }
+        // }
         stage('Build') {
             steps {
                 sh """
